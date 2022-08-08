@@ -12,3 +12,20 @@
     border-radius: 0.7rem;
     background-color: azure;
 }
+#cont{
+    margin-top:10vh;width: 100%;height:50vh;
+}
+#log{
+    width:12vw;
+}
+#for{
+    width:25%;height:100%;border-width:3px;border-style:solid;border-color:black;border-radius:0.5rem;background-color: grey;
+}
+@media screen and (max-width:800px){
+    #log{
+        width:22vw;
+    }
+    #for{
+        width: 60%;height:80%;
+    }
+}
