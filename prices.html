@@ -69,55 +69,61 @@
                 "pk_test_51LTpAdSIWoXhd6a0oUWzt9yQnUoBKDshdh51DjxTE6wN5t2DiF7KRWPSeUduDWjly6xGTjyBDN5p40ZFflUbMuOr00lQZFxawr"
             );
             document.getElementById("checkout").addEventListener("click",function(){
-                stripe.redirectToCheckout({
-                    lineItems: [
-                        {
-                            price:"price_1LTpMdSIWoXhd6a0XG5yMAS1",
-                            quantity:1,
-                        }
-                    ],
-                    mode: "subscription",
-                    successUrl: "https://www.google.com/",
-                    cancelUrl: "https://www.twitter.com/",
-                }).then(function(result){
-                    alert(result);
-                });
+                if (confirm('Proceed to Checkout?')){
+                        stripe.redirectToCheckout({
+                        lineItems: [
+                            {
+                                price:"price_1LTpMdSIWoXhd6a0XG5yMAS1",
+                                quantity:1,
+                            }
+                        ],
+                        mode: "subscription",
+                        successUrl: "https://www.google.com/",
+                        cancelUrl: "https://www.twitter.com/",
+                    }).then(function(result){
+                        alert(result);
+                    });
+                }
             })
             var stripe = Stripe(
                 "pk_test_51LTpAdSIWoXhd6a0oUWzt9yQnUoBKDshdh51DjxTE6wN5t2DiF7KRWPSeUduDWjly6xGTjyBDN5p40ZFflUbMuOr00lQZFxawr"
             );
             document.getElementById("checkoutone").addEventListener("click",function(){
-                stripe.redirectToCheckout({
-                    lineItems: [
-                        {
-                            price:"price_1LTpNzSIWoXhd6a09l1z2QUI",
-                            quantity:1,
-                        }
-                    ],
-                    mode: "subscription",
-                    successUrl: "https://www.google.com/",
-                    cancelUrl: "https://www.twitter.com/",
-                }).then(function(result){
-                    alert(result);
-                });
+                if (confirm('Proceed to checkout?')){
+                        stripe.redirectToCheckout({
+                        lineItems: [
+                            {
+                                price:"price_1LTpNzSIWoXhd6a09l1z2QUI",
+                                quantity:1,
+                            }
+                        ],
+                        mode: "subscription",
+                        successUrl: "https://www.google.com/",
+                        cancelUrl: "https://www.twitter.com/",
+                    }).then(function(result){
+                        alert(result);
+                    });
+                }
             })
             var stripe = Stripe(
                 "pk_test_51LTpAdSIWoXhd6a0oUWzt9yQnUoBKDshdh51DjxTE6wN5t2DiF7KRWPSeUduDWjly6xGTjyBDN5p40ZFflUbMuOr00lQZFxawr"
             );
             document.getElementById("checkouttwo").addEventListener("click",function(){
-                stripe.redirectToCheckout({
-                    lineItems: [
-                        {
-                            price:"price_1LTpOuSIWoXhd6a0n2MEidnN",
-                            quantity:1,
-                        }
-                    ],
-                    mode: "subscription",
-                    successUrl: "https://www.google.com/",
-                    cancelUrl: "https://www.twitter.com/",
-                }).then(function(result){
-                    alert(result);
-                });
+                if (confirm('Proceed to checkout?')){
+                    stripe.redirectToCheckout({
+                        lineItems: [
+                            {
+                                price:"price_1LTpOuSIWoXhd6a0n2MEidnN",
+                                quantity:1,
+                            }
+                        ],
+                        mode: "subscription",
+                        successUrl: "https://www.google.com/",
+                        cancelUrl: "https://www.twitter.com/",
+                    }).then(function(result){
+                        alert(result);
+                    });
+                }
             })
         </script>
     </body>
