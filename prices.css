@@ -4,7 +4,7 @@
 #card{
     margin-left:2vw;
     width:24vw;
-    height:35vw;
+    height:45vw;
 }
 #display1{
     height:100vw;display: none;border-radius: 2rem;border-width:4px;border-color:black;width:90vw;border-style: solid;opacity:0.9;background-image: linear-gradient(to bottom right, rgb(6, 6, 6), rgb(243, 243, 233));
