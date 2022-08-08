@@ -1,0 +1,38 @@
+#fade{
+    float: left;
+}
+#card{
+    margin-left:8vw;
+    width:17vw;
+    height:45vh;
+}
+#display1{
+    height:150vh;
+
+}
+#logo1{
+    width: 12vw;
+}
+#head1{
+    margin-top: -5vh;
+}
+@media only screen and (max-width:850px){
+    #fade{
+        float: none;
+    }
+    #card{
+        margin-left:-4vw;
+        width:35vw;
+        height: 40vh;
+        margin-top: 10vh;
+    }
+    #display1{
+        height:250vh;
+    }
+    #head1{
+        margin-top:0;
+    }
+    #logo1{
+        width:23vw;
+    }
+}

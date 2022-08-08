@@ -1,0 +1,30 @@
+#login_div{
+    width:20vw;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
+}
+#display{
+    margin-top:-3vh;margin-left: -2vw;display: none;width: 105vw;height: 105vh;
+}
+#resp{
+    width:23vw;height: 70vh;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
+}
+#respo1{
+    width:30vw;height:120vh;border-style: solid;border-color:black;border-width: 3px;border-radius:1rem;box-shadow: 3px 8px;
+}
+#prof1{
+    width: 12vw;
+}
+@media only screen and (max-width: 800px) {
+    #login_div{
+        width:56vw;
+    }
+    #resp{
+        width:56vw;
+    }
+    #respo1{
+        width:70vw;
+    }
+    #prof1{
+        width:42vw;
+    }
+    
+}

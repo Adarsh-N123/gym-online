@@ -1,0 +1,17 @@
+
+#prof1{
+    width: 12vw;
+}
+
+#form{
+    width:30vw;height:120vh;border-style: solid;border-color:black;border-width: 3px;border-radius:1rem;box-shadow: 3px 8px;
+}
+
+@media only screen and (max-width: 800px){
+    #prof1{
+        width: 22vw;
+    }
+    #form{
+        width: 60vw;
+    }
+}

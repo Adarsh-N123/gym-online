@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+        <link rel="stylesheet" href="login.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+
+        
+    </head>
+    <body style="background-image: linear-gradient(to bottom right, rgb(6, 6, 6), rgb(243, 243, 233));background-repeat:no-repeat;background-attachment:fixed;background-position:center;">
+        <center ><div id="display1" style="margin-top: 15vh;" id="loader1"><center><h1><span style="color: rgb(15, 176, 230);">Getting Your</span><span>Login Page Ready...</span></h1></center></div></center>
+        <center><img id="loaderonetwo" src="img/hi.gif" style="margin-top: 15vh;width:10vw;"></center>
+        <div id="display" style="margin-top:-3vh;margin-left: -2vw;display: none;width: 105vw;height: 105vh;">
+            <center>
+                <br>
+                <br>
+                <br>
+                
+                <div id="login_div">
+                    <h1><span style="color: rgb(40, 128, 222);margin-top: 3vh;">Sign</span> In</h1>
+                    
+                    <hr>
+                    <input required type="text" placeholder="Username" id="user" style="width:80%;height:6%;margin-top: 15%;border-color: black;border-radius: 0.5rem;border-style:solid;border-width:3px;">
+                    <input required type="password" placeholder="Password" id="pass" style="width:80%;height:6%;margin-top: 15%;border-color: black;border-radius: 0.5rem;border-style:solid;border-width:3px;">
+                    <br>
+                    <br>
+                    
+                    <button id="login"  style="width:30%;height:4vh;background-color: blueviolet;border-radius: 00.5rem;">Login</button>
+                <br>
+                <br>
+                
+                <hr>
+                
+                <h5>Not signedup? <span><a href="signup.html">Signup</a></span></h3>
+                    <button id="signinfinal"  style="width: 90%;height:4vh;background-color:white;margin-bottom: 10%;"><img src="img/logo.png" style="width:4%;margin-left:-10%;margin-right:5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SignIn with Google</button>
+                
+                
+                </div>
+                <div id="user_div" style="display: none;">
+                    <center><img id="prof1" src="logofinal-01.png"></center>
+                    
+                   
+                    
+                    <br>
+                    <div id="profone" >
+                        
+                        <center><h1><span style="color: rgb(41, 41, 234);">Profile</span><span>&nbsp;Form</span></h1></center>
+                        <center>
+                            <div id="respo1" >
+                                <br>
+                                <br>
+        
+                                <span><h2>UserName:</h2></span><input placeholder="UserName" type="text" id="i1" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <span style="margin-top: 5vh;"><h2>Name:</h2></span><input placeholder="Name" type="text" id="i2" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <span style="margin-top: 5vh;"><h2>Current Weight:</h2></span><input placeholder="Current Weight Name" type="number" id="i3" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <span style="margin-top: 5vh;"><h2>Weight Goal:</h2></span><input placeholder="Weight Goal" type="number" id="i4" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <span style="margin-top: 5vh;"><h2>Height:</h2>:</h2></span><input placeholder="Height" type="text" id="i5" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <span style="margin-top: 5vh;"><h2>Mobile:</h2></span><input placeholder="Mobile No" type="tel" id="i6" required style="width:80%;height:5%;border-radius:0.5rem;border-width:3px;border-style:solid;border-color:black;">
+                                <button id="profile"  style="margin-top:4vh;width:50%;height:5vh;border-radius:0.5rem;background-color:bisque">Set Profile</button>
+                            </div>
+                            <br>
+                            <button id="logout" style="width:20vw;height:5vh;background-color:antiquewhite;margin-top:10vh;">Logout</button>
+                        </center>
+                    </div>
+                    
+                    <br>
+                    <br>
+                    
+                </div>
+                
+            </center>
+        </div>
+        
+        
+
+        
+        
+          
+            
+          
+          
+        
+        
+        
+    </body>
+    
+    <script type="module">
+         var loader = document.getElementById("loaderonetwo");
+        var displayText = document.getElementById("display");
+        var displayone = document.getElementById("display1");
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+            displayText.style.display="block";
+            displayone.style.display="none";
+            
+        })
+
+        // Import the functions you need from the SDKs you need
+        import {} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+        import { GoogleAuthProvider,signInWithPopup,signOut, getAuth, onAuthStateChanged, signInWithRedirect, getRedirectResult,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js";
+      
+        // TODO: Add SDKs for Firebase products that you want to use
+      
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      
+        // Your web app's Firebase configuration
+      
+        const firebaseConfig = {
+      
+          apiKey: "AIzaSyA4nGl6BlOmxbN5-aVRzncscLM5VaHhyKM",
+      
+          authDomain: "gym-online-a5be6.firebaseapp.com",
+      
+          projectId: "gym-online-a5be6",
+      
+          storageBucket: "gym-online-a5be6.appspot.com",
+      
+          messagingSenderId: "939458942559",
+      
+          appId: "1:939458942559:web:80ea1c3e3c37919ec4edea",
+
+          databaseURL: "https://gym-online-a5be6-default-rtdb.firebaseio.com/"
+
+      
+        };
+      
+      
+        // Initialize Firebase
+      
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+                onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    // User is signed in, see docs for a list of available properties
+                    // https://firebase.google.com/docs/reference/js/firebase.User
+                    const uid = user.uid;
+                    document.getElementById("user_div").style.display="block";
+                    document.getElementById("login_div").style.display="none";
+                    const auth = getAuth();
+                    var user = auth.currentUser;
+                    if (user!=null){
+                        var email_id = user.email;
+                        var passone = user.password;
+                        document.getElementById("user_para").innerHTML="User:"+email_id;
+                        document.getElementById("i1").value=email_id;
+                        
+                    }
+
+                    // ...
+                } else {
+                    // User is signed out
+                    // ...
+                    document.getElementById("user_div").style.display="none";
+                    document.getElementById("login_div").style.display="block";
+                }
+                });
+        document.getElementById('login').addEventListener('click',()=>{
+            var userEmail = document.getElementById('user').value;
+                var userPass = document.getElementById('pass').value;
+                const auth = getAuth();
+                signInWithEmailAndPassword(auth, userEmail, userPass)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    window.alert("Error:"+errorMessage);
+                });
+        })    
+        document.getElementById('logout').addEventListener('click',()=>{
+            const auth = getAuth();
+            signOut(auth).then(() => {
+                document.getElementById("user_div").style.display="none";
+                document.getElementById("login_div").style.display="block";
+                document.getElementById('admin').style.display="none";
+            // Sign-out successful.
+            }).catch((error) => {
+            // An error happened.
+            });
+        })
+        document.getElementById('signinfinal').addEventListener('click',()=>{
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    // This gives you a Google Access Token. You can use it to access the Google API.
+                    const credential = GoogleAuthProvider.credentialFromResult(result);
+                    const token = credential.accessToken;
+                    // The signed-in user info.
+                    const user = result.user;
+                    document.getElementById("user_div").style.display="block";
+                    document.getElementById("login_div").style.display="none";
+                    const auth = getAuth();
+                    
+                    if (user!=null){
+                        var email_id = user.email;
+                        var passone = user.password;
+                        document.getElementById("user_para").innerHTML="User:"+email_id;
+                        document.getElementById("i1").value=email_id;
+                        document.getElementById("i2").value=passone;
+                    }
+                    
+                    // ...
+                }).catch((error) => {
+                    // Handle Errors here.
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // The email of the user's account used.
+                    const email = error.customData.email;
+                    // The AuthCredential type that was used.
+                    const credential = GoogleAuthProvider.credentialFromError(error);
+                    // ...
+                });
+        })
+        
+        
+
+
+        
+        
+        
+      
+      </script>
+      
+</html>
