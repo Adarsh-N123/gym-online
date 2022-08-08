@@ -13,6 +13,9 @@
 #prof1{
     width: 12vw;
 }
+#respone{
+    width:23vw;height: 65vh;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
+}
 @media only screen and (max-width: 800px) {
     #login_div{
         width:56vw;
@@ -25,6 +28,10 @@
     }
     #prof1{
         width:42vw;
+    }
+    #respone{
+        width:56vw;
+        height: 59vh;
     }
     
 }
