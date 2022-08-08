@@ -1,5 +1,5 @@
 #login_div{
-    width:20vw;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
+    width:20vw;height: 50vw;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
 }
 #display{
     margin-top:-3vh;margin-left: -2vw;display: none;width: 105vw;height: 105vh;
@@ -14,11 +14,12 @@
     width: 12vw;
 }
 #respone{
-    width:23vw;height: 65vh;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
+    width:23vw;height: 50vw;border-style: solid;border-radius: 2rem;border-color: black;border-width: 3px;margin-top: 7vh;
 }
 @media only screen and (max-width: 800px) {
     #login_div{
         width:56vw;
+        height: 120vw;
     }
     #resp{
         width:56vw;
@@ -31,7 +32,7 @@
     }
     #respone{
         width:56vw;
-        height: 59vh;
+        height: 120vw;
     }
     
 }
