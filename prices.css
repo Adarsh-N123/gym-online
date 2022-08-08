@@ -2,37 +2,43 @@
     float: left;
 }
 #card{
-    margin-left:8vw;
-    width:17vw;
-    height:45vh;
+    margin-left:2vw;
+    width:24vw;
+    height:35vw;
 }
 #display1{
-    height:150vh;
+    height:100vw;display: none;border-radius: 2rem;border-width:4px;border-color:black;width:90vw;border-style: solid;opacity:0.9;background-image: linear-gradient(to bottom right, rgb(6, 6, 6), rgb(243, 243, 233));
 
 }
 #logo1{
     width: 12vw;
 }
 #head1{
-    margin-top: -5vh;
+    margin-top: 5vw;
 }
-@media only screen and (max-width:700px){
+#checkout{
+    cursor:pointer;text-decoration: none;color:black;background-color:rgb(240, 9, 9);width:80%;height:5%;border-style:solid;border-width:1px;border-color:black;border-radius:1rem;width:80%;height:30px;
+}
+#checkoutone{
+    cursor:pointer;text-decoration: none;color:black;background-color:rgb(240, 9, 9);width:80%;height:5%;border-style:solid;border-width:1px;border-color:black;border-radius:1rem;width:80%;height:28px;
+}
+#checkouttwo{
+    cursor:pointer;text-decoration: none;color:black;background-color:rgb(240, 9, 9);width:80%;height:5%;border-style:solid;border-width:1px;border-color:black;border-radius:1rem;width:80%;height:30px;
+}
+@media screen and (max-width: 800px){
     #fade{
-        float: none;
+        float:none;
     }
     #card{
+        margin-top: 15vw;
         margin-left:-4vw;
-        width:42vw;
-        height: 53vh;
-        margin-top: 10vh;
+        width: 55vw;
+        height: 70vw;
     }
     #display1{
-        height:300vh;
-    }
-    #head1{
-        margin-top:0;
+        height:330vw;
     }
     #logo1{
-        width:23vw;
+        width: 29vw;
     }
 }
