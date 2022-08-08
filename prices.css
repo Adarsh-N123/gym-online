@@ -16,18 +16,18 @@
 #head1{
     margin-top: -5vh;
 }
-@media only screen and (max-width:850px){
+@media only screen and (max-width:700px){
     #fade{
         float: none;
     }
     #card{
         margin-left:-4vw;
-        width:35vw;
-        height: 40vh;
+        width:42vw;
+        height: 53vh;
         margin-top: 10vh;
     }
     #display1{
-        height:250vh;
+        height:300vh;
     }
     #head1{
         margin-top:0;
