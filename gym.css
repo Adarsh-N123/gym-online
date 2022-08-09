@@ -42,6 +42,9 @@
 #form{
     width:30vw;border-style: solid;border-color:black;border-width: 3px;border-radius:1rem;box-shadow: 3px 8px;
 }
+#imgimg{
+    width:7vw;
+}
 
 @media only screen and (max-width: 800px){
     #prof1{
@@ -51,4 +54,20 @@
         width: 60vw;
     }
 }
+#testi{
+    border-style: solid;border-color:black;width:40vw;height:30vw;background-color:grey;border-radius:1rem;margin-left: 30.5vw;
+    
+}
 
+
+
+@media screen and (max-width:850px){
+    #testi{
+        width:60vw;
+        height:60vw;
+        margin-left:20vw;
+    }
+    #imgimg{
+        width:15vw;
+    }
+}
